@@ -1,0 +1,14 @@
+@import "./style/styles.scss";
+
+.App {
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.Components {
+  width: 100%;
+  @include flex-row($jc: center);
+}
