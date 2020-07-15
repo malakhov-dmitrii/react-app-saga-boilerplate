@@ -1,1 +1,1 @@
-export { default } from "./Transformer";
+export { default } from './Transformer';

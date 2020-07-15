@@ -1,14 +1,15 @@
-@import "./style/styles.scss";
+@import './style/styles';
 
-.App {
-  text-align: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+.app {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
 }
 
-.Components {
-  width: 100%;
-  @include flex-row($jc: center);
+.components {
+    width: 100%;
+
+    @include flex-row($jc: center);
 }

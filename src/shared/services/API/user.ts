@@ -1,7 +1,7 @@
-const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+import { UserResponse } from '../../../store/Users/users.reducer';
 
-export const getUser = async (id: any) => {
-  return await fetch("https://jsonplaceholder.typicode.com/users/1").then((r) =>
-    r.json()
-  );
+export const delay = (ms: number): Promise<void> => new Promise((res) => setTimeout(res, ms));
+
+export const getUser = async (id = 1): Promise<UserResponse> => {
+    return await fetch(`https://jsonplaceholder.typicode.com/users/${id}`).then((r) => r.json());
 };

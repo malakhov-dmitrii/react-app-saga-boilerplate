@@ -1,22 +1,26 @@
-@import "./_mixins";
-@import "./_variables";
+@import './mixins';
+@import './variables';
 
 .m-5 {
-  margin: 5px;
+    margin: 5px;
 }
+
 .mt-5 {
-  margin-top: 5px;
+    margin-top: 5px;
 }
+
 .mb-5 {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
+
 .ml-5 {
-  margin-left: 5px;
+    margin-left: 5px;
 }
+
 .mr-5 {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 .m-15 {
-  margin: 15px;
+    margin: 15px;
 }
