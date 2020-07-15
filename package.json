@@ -36,22 +36,25 @@
         "build": "craco build",
         "lint": "eslint '*/**/*.{js,ts,tsx}'",
         "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
-        "lint:styles": "eslint '*/**/*.{js,ts,tsx}'",
-        "lint:styles:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
+        "lint:styles": "stylelint '**/*.scss'",
+        "lint:styles:fix": "stylelint '**/*.scss' --fix",
         "test": "craco test"
     },
     "eslintConfig": {
         "extends": "react-app"
     },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "pretty-quick --staged",
+            "eslint src/ --fix",
+            "git add"
+        ]
+    },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "npm run lint:fix",
+            "pre-push": "npm run lint"
         }
-    },
-    "lint-staged": {
-        "*.{js,ts,tsx}": [
-            "eslint --fix"
-        ]
     },
     "browserslist": {
         "production": [
